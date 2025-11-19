@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - Panel de Control</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">📊</span>
+          <h2 class="logo-text">AdminPanel</h2>
+        </div>
+        <button class="sidebar-toggle" id="sidebarToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul class="nav-list">
+          <li class="nav-item active">
+            <a href="#" class="nav-link">
+              <span class="nav-icon">🏠</span>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon">👥</span>
+              <span class="nav-text">Usuarios</span>
+              <span class="badge">24</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon">📦</span>
+              <span class="nav-text">Productos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon">💰</span>
+              <span class="nav-text">Ventas</span>
+              <span class="badge success">+15</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon">📊</span>
+              <span class="nav-text">Analíticas</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon">💬</span>
+              <span class="nav-text">Mensajes</span>
+              <span class="badge warning">5</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon">⚙️</span>
+              <span class="nav-text">Configuración</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100" alt="Usuario" class="user-avatar">
+          <div class="user-info">
+            <h4 class="user-name">Juan Pérez</h4>
+            <p class="user-role">Administrador</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <button class="menu-hamburger" id="menuHamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Buscar..." class="search-input">
+          </div>
+        </div>
+
+        <div class="header-right">
+          <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <button class="notification-btn" id="notificationBtn">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-badge">3</span>
+          </button>
+
+          <div class="user-menu">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100" alt="Usuario" class="user-menu-avatar">
+            <span class="user-menu-name">Juan P.</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Stats Cards -->
+      <section class="stats-section">
+        <div class="stats-grid">
+          <div class="stat-card loading" data-loaded="false">
+            <div class="stat-icon primary">
+              <span>👥</span>
+            </div>
+            <div class="stat-info">
+              <h3 class="stat-value" data-value="2,543">0</h3>
+              <p class="stat-label">Usuarios Totales</p>
+              <div class="stat-change positive">
+                <span>↑ 12%</span>
+                <span class="stat-period">vs mes anterior</span>
+              </div>
+            </div>
+            <div class="loading-overlay">
+              <div class="spinner"></div>
+            </div>
+          </div>
+
+          <div class="stat-card loading" data-loaded="false">
+            <div class="stat-icon success">
+              <span>💰</span>
+            </div>
+            <div class="stat-info">
+              <h3 class="stat-value" data-value="45,678">$0</h3>
+              <p class="stat-label">Ingresos</p>
+              <div class="stat-change positive">
+                <span>↑ 8.5%</span>
+                <span class="stat-period">vs mes anterior</span>
+              </div>
+            </div>
+            <div class="loading-overlay">
+              <div class="spinner"></div>
+            </div>
+          </div>
+
+          <div class="stat-card loading" data-loaded="false">
+            <div class="stat-icon warning">
+              <span>📦</span>
+            </div>
+            <div class="stat-info">
+              <h3 class="stat-value" data-value="1,234">0</h3>
+              <p class="stat-label">Productos</p>
+              <div class="stat-change positive">
+                <span>↑ 3.2%</span>
+                <span class="stat-period">vs mes anterior</span>
+              </div>
+            </div>
+            <div class="loading-overlay">
+              <div class="spinner"></div>
+            </div>
+          </div>
+
+          <div class="stat-card loading" data-loaded="false">
+            <div class="stat-icon danger">
+              <span>📈</span>
+            </div>
+            <div class="stat-info">
+              <h3 class="stat-value" data-value="8,942">0</h3>
+              <p class="stat-label">Ventas</p>
+              <div class="stat-change negative">
+                <span>↓ 2.1%</span>
+                <span class="stat-period">vs mes anterior</span>
+              </div>
+            </div>
+            <div class="loading-overlay">
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts-section">
+        <div class="charts-grid">
+          <!-- Revenue Chart -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Ingresos Mensuales</h3>
+              <select class="chart-filter">
+                <option>Últimos 6 meses</option>
+                <option>Último año</option>
+                <option>Todo el tiempo</option>
+              </select>
+            </div>
+            <div class="chart-body">
+              <div class="line-chart">
+                <div class="chart-bars">
+                  <div class="chart-bar" style="height: 60%;" data-value="$12,450"></div>
+                  <div class="chart-bar" style="height: 75%;" data-value="$15,230"></div>
+                  <div class="chart-bar" style="height: 55%;" data-value="$11,890"></div>
+                  <div class="chart-bar" style="height: 85%;" data-value="$18,340"></div>
+                  <div class="chart-bar" style="height: 70%;" data-value="$14,560"></div>
+                  <div class="chart-bar" style="height: 90%;" data-value="$19,780"></div>
+                </div>
+                <div class="chart-labels">
+                  <span>Ene</span>
+                  <span>Feb</span>
+                  <span>Mar</span>
+                  <span>Abr</span>
+                  <span>May</span>
+                  <span>Jun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Traffic Sources -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Fuentes de Tráfico</h3>
+              <button class="chart-action">Ver más</button>
+            </div>
+            <div class="chart-body">
+              <div class="donut-chart">
+                <svg viewBox="0 0 200 200" class="donut-svg">
+                  <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-primary)" stroke-width="40" stroke-dasharray="201 502" transform="rotate(-90 100 100)"></circle>
+                  <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-success)" stroke-width="40" stroke-dasharray="150 502" stroke-dashoffset="-201" transform="rotate(-90 100 100)"></circle>
+                  <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-warning)" stroke-width="40" stroke-dasharray="100 502" stroke-dashoffset="-351" transform="rotate(-90 100 100)"></circle>
+                  <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-danger)" stroke-width="40" stroke-dasharray="51 502" stroke-dashoffset="-451" transform="rotate(-90 100 100)"></circle>
+                </svg>
+                <div class="donut-center">
+                  <span class="donut-total">100%</span>
+                </div>
+              </div>
+              <div class="donut-legend">
+                <div class="legend-item">
+                  <span class="legend-color primary"></span>
+                  <span class="legend-label">Directo (40%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color success"></span>
+                  <span class="legend-label">Orgánico (30%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color warning"></span>
+                  <span class="legend-label">Social (20%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color danger"></span>
+                  <span class="legend-label">Referidos (10%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Activity & Top Products -->
+      <section class="data-section">
+        <div class="data-grid">
+          <!-- Recent Activity -->
+          <div class="data-card">
+            <div class="data-header">
+              <h3 class="data-title">Actividad Reciente</h3>
+              <button class="data-action">Ver todo</button>
+            </div>
+            <div class="data-body">
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="activity-icon primary">
+                    <span>👤</span>
+                  </div>
+                  <div class="activity-content">
+                    <h4 class="activity-title">Nuevo usuario registrado</h4>
+                    <p class="activity-description">María García se unió a la plataforma</p>
+                    <span class="activity-time">Hace 5 minutos</span>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon success">
+                    <span>💳</span>
+                  </div>
+                  <div class="activity-content">
+                    <h4 class="activity-title">Nueva venta completada</h4>
+                    <p class="activity-description">Pedido #8742 - $234.50</p>
+                    <span class="activity-time">Hace 12 minutos</span>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon warning">
+                    <span>⚠️</span>
+                  </div>
+                  <div class="activity-content">
+                    <h4 class="activity-title">Inventario bajo</h4>
+                    <p class="activity-description">Producto "Laptop XYZ" con 5 unidades</p>
+                    <span class="activity-time">Hace 1 hora</span>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon primary">
+                    <span>📝</span>
+                  </div>
+                  <div class="activity-content">
+                    <h4 class="activity-title">Nuevo comentario</h4>
+                    <p class="activity-description">Carlos dejó una reseña de 5 estrellas</p>
+                    <span class="activity-time">Hace 2 horas</span>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon danger">
+                    <span>🚫</span>
+                  </div>
+                  <div class="activity-content">
+                    <h4 class="activity-title">Pago rechazado</h4>
+                    <p class="activity-description">Pedido #8740 - Verificar método de pago</p>
+                    <span class="activity-time">Hace 3 horas</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Products -->
+          <div class="data-card">
+            <div class="data-header">
+              <h3 class="data-title">Productos Principales</h3>
+              <button class="data-action">Ver todo</button>
+            </div>
+            <div class="data-body">
+              <div class="products-list">
+                <div class="product-item">
+                  <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=100" alt="Producto" class="product-image">
+                  <div class="product-info">
+                    <h4 class="product-name">Laptop Pro 15"</h4>
+                    <p class="product-category">Electrónica</p>
+                  </div>
+                  <div class="product-stats">
+                    <span class="product-sales">234 ventas</span>
+                    <span class="product-price">$1,299</span>
+                  </div>
+                  <div class="product-progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                  <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100" alt="Producto" class="product-image">
+                  <div class="product-info">
+                    <h4 class="product-name">Auriculares Wireless</h4>
+                    <p class="product-category">Audio</p>
+                  </div>
+                  <div class="product-stats">
+                    <span class="product-sales">189 ventas</span>
+                    <span class="product-price">$299</span>
+                  </div>
+                  <div class="product-progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=100" alt="Producto" class="product-image">
+                  <div class="product-info">
+                    <h4 class="product-name">Reloj Inteligente</h4>
+                    <p class="product-category">Wearables</p>
+                  </div>
+                  <div class="product-stats">
+                    <span class="product-sales">156 ventas</span>
+                    <span class="product-price">$399</span>
+                  </div>
+                  <div class="product-progress">
+                    <div class="progress-bar" style="width: 60%;"></div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                  <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=100" alt="Producto" class="product-image">
+                  <div class="product-info">
+                    <h4 class="product-name">Cámara Digital 4K</h4>
+                    <p class="product-category">Fotografía</p>
+                  </div>
+                  <div class="product-stats">
+                    <span class="product-sales">98 ventas</span>
+                    <span class="product-price">$899</span>
+                  </div>
+                  <div class="product-progress">
+                    <div class="progress-bar" style="width: 45%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Notification Panel -->
+  <div class="notification-panel" id="notificationPanel">
+    <div class="notification-header">
+      <h3>Notificaciones</h3>
+      <button class="close-panel" id="closePanel">✕</button>
+    </div>
+    <div class="notification-body">
+      <div class="notification-item unread">
+        <div class="notification-icon primary">📧</div>
+        <div class="notification-content">
+          <h4>Nuevo mensaje</h4>
+          <p>Tienes un mensaje de soporte técnico</p>
+          <span class="notification-time">Hace 10 min</span>
+        </div>
+      </div>
+      <div class="notification-item unread">
+        <div class="notification-icon success">✓</div>
+        <div class="notification-content">
+          <h4>Tarea completada</h4>
+          <p>La exportación de datos ha finalizado</p>
+          <span class="notification-time">Hace 30 min</span>
+        </div>
+      </div>
+      <div class="notification-item">
+        <div class="notification-icon warning">⚠️</div>
+        <div class="notification-content">
+          <h4>Actualización disponible</h4>
+          <p>Nueva versión del sistema disponible</p>
+          <span class="notification-time">Hace 2 horas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
