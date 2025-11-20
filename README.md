@@ -1,0 +1,1 @@
+Ejercicio: Crea un dashboard administrativo responsivo que incluya: sidebar navegable con animaciones, área principal con cards en grid que se adaptan al tamaño, gráficos simulados con CSS, y un header con menú hamburguesa. Implementa un tema oscuro/claro usando CSS custom properties y agrega micro-interacciones (hover effects, loading states, etc.).
